@@ -1,0 +1,45 @@
+Mardigon Toler
+Gregory Hughes
+
+CS 456  Digital Image Processing
+Morphological Biometrics and Edge Strength Detection
+======================================================================================================
+
+Dependencies:
+
+python3
+scipy
+numpy
+scikit-image
+
+======================================================================================================
+
+
+We have implemented our functions in Python.
+Morphological functions are defined in morpho.py.
+Our Edge Strength detection is in EdgeStrength.py.
+
+You can run an interactive demonstration of the edge strenth detection
+with the command:
+python EdgeStrength.py
+
+
+
+======================================================================================================
+We credit
+
+Stéfan van der Walt, Johannes L. Schönberger, Juan Nunez-Iglesias, François Boulogne, Joshua D.
+      Warner, Neil Yager, Emmanuelle Gouillart, Tony Yu and the scikit-image contributors
+
+for the image processing code in scipy, as well as
+
+Jones E, Oliphant E, and Peterson P for scipy itself.
+
+Also, some of our methods were inspired by:
+Kulkarni, Mandar Kiran, and S. S. Lokhande. "Morphological Based Face Detection & Recognition with
+      Principal Component Analysis."
+
+International Journal of Computer Science and Information
+      Technologies
+
+ 5, no. 3 (2014): 4560-565.
