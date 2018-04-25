@@ -14,7 +14,7 @@
 """
 import numpy as np
 import scipy.ndimage.morphology as scimorph
-import skimage.io ashttps://www.google.com/search?q=abe+lincoln+face&client=firefox-b-1-ab&tbm=isch&source=iu&ictx=1&fir=blltsTfaQtV35M%253A%252CDHoIg-5H0a46EM%252C_&usg=__UHVmQICl6Xe-8iGyOOwYwxtrovo%3D&sa=X&ved=0ahUKEwjx1Y-rudbaAhWjTt8KHeq9CmcQ9QEIMTAD#imgrc=blltsTfaQtV35M: skio
+import skimage.io as skio
 import skimage.filters as filters
 import matplotlib.pyplot as plt
 import skimage.util as util
@@ -58,7 +58,6 @@ def EdgeStrengths(I, SE, n, edge_thresh=0.5, feature_scanner=corner_match,
                   edge_func=filters.sobel,
                   demo = False):
 
-    img = np.copy(I)
     hitMissed = [feature_scanner(I,SE)]
     hitMissedEdges = [edge_func(hitMissed[0])]
     if demo:
