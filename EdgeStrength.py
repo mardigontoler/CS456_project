@@ -14,7 +14,7 @@
 """
 import numpy as np
 import scipy.ndimage.morphology as scimorph
-import skimage.io as skio
+import skimage.io ashttps://www.google.com/search?q=abe+lincoln+face&client=firefox-b-1-ab&tbm=isch&source=iu&ictx=1&fir=blltsTfaQtV35M%253A%252CDHoIg-5H0a46EM%252C_&usg=__UHVmQICl6Xe-8iGyOOwYwxtrovo%3D&sa=X&ved=0ahUKEwjx1Y-rudbaAhWjTt8KHeq9CmcQ9QEIMTAD#imgrc=blltsTfaQtV35M: skio
 import skimage.filters as filters
 import matplotlib.pyplot as plt
 import skimage.util as util
@@ -23,7 +23,12 @@ from skimage.feature import match_template
 
 """
  Similar to morphomatch, but marks the top left corner of the SE's
- location whenever
+ location whenever.
+ No padding necessarry.
+ In it's current form, this marks the new image at
+ the top left corner of the structuring element's position
+ in I. This has the effect of "shrinking" I to the top left corner.
+
 """
 def corner_match(I,B):
     M = len(I)
@@ -56,13 +61,15 @@ def EdgeStrengths(I, SE, n, edge_thresh=0.5, feature_scanner=corner_match,
     img = np.copy(I)
     hitMissed = [feature_scanner(I,SE)]
     hitMissedEdges = [edge_func(hitMissed[0])]
-    show(hitMissed[0], hitMissedEdges[0])
+    if demo:
+        show(hitMissed[0], hitMissedEdges[0])
     for i in range(1, n):
         # find the hit or miss transform of the previous stage
         hitMissed.append(feature_scanner(hitMissed[i-1],SE))
         # edge detected images are magnitudes from 0 to 1, so threshold
         hitMissedEdges.append(edge_func(hitMissed[i]) > edge_thresh )
-        show(hitMissed[i], hitMissedEdges[i])
+        if demo:
+            show(hitMissed[i], hitMissedEdges[i])
 
     # add images together and normalize
     return sum(hitMissedEdges)/n

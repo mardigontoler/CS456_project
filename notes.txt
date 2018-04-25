@@ -1,0 +1,11 @@
+
+Implemented own morphological processing
+
+We decided not to try to find biomentetrics because hardness and time constraintsw
+
+Program is scanning the upper half of an image to find a ROI
+
+We are using template matching template matching with a structuring element representing eyes separated by space
+and we scan inside the ROI
+
+It is still difficult to determine where the exact location of an eye is.
