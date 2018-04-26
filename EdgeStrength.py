@@ -11,6 +11,8 @@
  Result should be an image of edges where intensity is related to thickness of edges.
 
  uses edge detection from scikit-image
+ We also extensively use the numpy n-dimensional array data structure
+ and many of its methods.
 """
 import numpy as np
 import scipy.ndimage.morphology as scimorph
@@ -74,6 +76,9 @@ def EdgeStrengths(I, SE, n, edge_thresh=0.5, feature_scanner=corner_match,
     return sum(hitMissedEdges)/n
 
 
+"""
+Shortcut for displaying images
+"""
 def show(A,B=None):
     if B is not None:
         plt.subplot(1,2,1)
