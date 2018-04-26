@@ -12,11 +12,13 @@ import skimage.feature as feature
 import skimage.io as io
 import numpy as np
 
+
 """
 Our first script for finding eyes using template matching"
 """
 
-img = io.imread("test4.png")
+img = io.imread("test3.png")
+
 imgB = color.rgb2grey(img) > 0.333
 io.imshow(imgB)
 plt.show()
@@ -49,7 +51,7 @@ unit = round(len(imgroi)/75)
 mid = len(se2)//2
 se2[mid-(unit*5):mid+(unit*5)] = 0
 se2[0:(unit*3)] = 0
-se2[len(se2)-(unit*3):len(se2)]
+se2[len(se2)-(unit*3):len(se2)] = 0
 se2 = np.reshape(se2,(1,len(se2)))
 
 # match SE for row with eyes
