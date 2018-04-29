@@ -12,12 +12,14 @@ import skimage.feature as feature
 import skimage.io as io
 import numpy as np
 
+# Make this the path to the file you wish to process
+fname = "test1a.png"
 
 """
 Our first script for finding eyes using template matching"
 """
 
-img = io.imread("test3.png")
+img = io.imread(fname)
 
 imgB = color.rgb2grey(img) > 0.333
 io.imshow(imgB)

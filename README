@@ -17,6 +17,12 @@ scikit-image
 
 We have implemented our functions in Python.
 Morphological functions are defined in morpho.py.
+
+You can run our routine for processing an image with 
+python process.py
+
+Modify process.py to indicate which image you want to process.
+
 Our Edge Strength detection is in EdgeStrength.py.
 
 You can run an interactive demonstration of the edge strenth detection
@@ -36,10 +42,8 @@ for the image processing code in scipy, as well as
 Jones E, Oliphant E, and Peterson P for scipy itself.
 
 Also, some of our methods were inspired by:
+
 Kulkarni, Mandar Kiran, and S. S. Lokhande. "Morphological Based Face Detection & Recognition with
       Principal Component Analysis."
-
-International Journal of Computer Science and Information
-      Technologies
-
- 5, no. 3 (2014): 4560-565.
+      International Journal of Computer Science and Information
+      Technologies 5, no. 3 (2014): 4560-565.
